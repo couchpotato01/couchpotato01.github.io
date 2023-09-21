@@ -15,7 +15,7 @@ function scrollFunction() {
 //------ CHANGE BACKGROUND AND TEXT COLOUR ------//
 // background
 let bgColourPicker;
-const defaultBgColor = "#08605F";
+const defaultBgColor = "#062556";
 // text
 let textColourPicker;
 const defaultTextColour = "#DE0D92";
@@ -49,3 +49,10 @@ function updateLiveText(event) {
     p.style.color = event.target.value;
   }
 }
+
+//----- FLASHING TEXT -----//
+function flash() {
+    var text = document.getElementById('flash');
+    text.style.color = (text.style.color=='red') ? 'blue':'red';
+}
+var clr = setInterval(flash, 1000);
